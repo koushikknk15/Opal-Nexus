@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpalNexus</title>
     <style>
         body {
             margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #video-container {
+            position: relative;
+            width: 100%;
+            max-width: 100vw;
             overflow: hidden;
         }
 
         video {
-            position:fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
             width: 100%;
-            height: 115%;
-            transform: translate(-50%, -50%);
-            z-index:-1;
+            height: 100%;
+            object-fit: cover; /* This property ensures the video covers the entire container */
+        }
+
+        @media (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+            video {
+                object-fit: contain; /* You can adjust this property based on your preference for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
-    <video autoplay loop muted>
-        <source src="lAUNCHING SOON.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <!-- Your content goes here -->
-   <!-- <div>
-        <h1>Welcome to My Website</h1>
-        <p>This is some content on the page.</p>
-    </div>-->
+    <div id="video-container">
+        <video autoplay loop muted>
+            <source src="lAUNCHING SOON.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </body>
 </html>
