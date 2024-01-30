@@ -1,88 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Form</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-    #video-background {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1000;
-        background-size: cover;
-    }
+        #video-container {
+            position: relative;
+            width: 100vw;
+            overflow: hidden;
+            height: 100vh;
+        }
 
-    .login-container {
-        position: relative;
-        z-index: 1;
-        background-color: rgba(255, 255, 255, 0.3); /* Increase transparency by changing the alpha value */
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 400px; /* Adjust width as needed */
-    }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This property ensures the video covers the entire container */
+        }
 
-    .login-container h2 {
-        margin-bottom: 30px;
-        font-size: 24px; /* Increase font size */
-    }
-
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-        width: 100%;
-        padding: 15px; /* Increase padding */
-        margin-bottom: 20px;
-        font-size: 16px; /* Increase font size */
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-
-    .login-container input[type="submit"] {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 15px 30px; /* Increase padding */
-        border-radius: 20px; /* Rounded corners */
-        cursor: pointer;
-        font-size: 18px; /* Increase font size */
-    }
-
-    .login-container input[type="submit"]:hover {
-        background-color: #0056b3;
-    }
-</style>
+        
+    </style>
 </head>
 <body>
-    <video id="video-background" autoplay muted loop>
-        <source src="lAUNCHING SOON.mp4" type="video/mp4"> <!-- Replace 'background.mp4' with your video file -->
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <input type="text" name="username" placeholder="Name" required><br>
-            <input type="password" name="password" placeholder="Gmailid" required><br>
-            <input type="submit" value="join us">
-        </form>
+    <div id="video-container">
+        <video autoplay loop muted>
+            <source src="lAUNCHING SOON.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 </body>
 </html>
